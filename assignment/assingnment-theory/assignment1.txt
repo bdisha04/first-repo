@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta>
+<link rel="stylesheet" href="">
+<style type="text/css"></style>
+<script></script>
+<noscript></noscript>
+</head>
+<body>
+
+what is purpose of <!DOCTYPE html>
+  This is used html and html5 elements or support all html elements 
+  This is used to sortcut of document type 
+
+
+</body>
+</html>
