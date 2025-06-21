@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,4 +16,23 @@ what is purpose of <!DOCTYPE html>
   This is used to sortcut of document type 
 
 
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta>
+<link rel="stylesheet" href="">
+<style type="text/css"></style>
+<script></script>
+<noscript></noscript>
+</head>
+<body>
+
+what is purpose of <!DOCTYPE html>
+  This is used html and html5 elements or support all html elements 
+  This is used to sortcut of document type 
+
+
+>>>>>>> d8d2c7e97aa8518a7df64129bf8007de7d398941
 </body>
