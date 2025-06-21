@@ -1,0 +1,20 @@
+html provides two types of html elements 
+
+a) block : which is covered 100% of width i.e called block elements 
+
+    examples : <h1></h1>
+               <div></div>
+               <p></p>
+               <footer></footer>
+               <header></header>
+               <form></form>
+               <table></table>
+b) non-block or inline elements :which is non-covered 100% of width i.e called block elements
+
+    examples: <b> 
+              <input>
+              <img>
+              <span></span>
+              <i></i>
+              <a></a>
+              <em></em>

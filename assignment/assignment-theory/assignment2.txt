@@ -1,0 +1,28 @@
+List of five html element ?
+
+a) <div></div>
+b) <p></p>
+c) <br>
+d) <hr>
+e) <em></em>
+
+<div>: Purpose of <div>
+    (1) Grouping content:- otganize related elements into sections.
+    (2) Styling with css:- apply styles (like colors,borders,margins) to a group of elements.
+    (3) Scripting with javascript:- make a section interactive (hide/show content).
+    (4) Layout control:- use in grid or flex layouts.
+    
+
+<p> : P tag use in html
+      The <p> tag stands for paragraph.
+      It is used to define a block of text as a paragraph.
+
+<br> : The <br> tag in html stands for line break.
+       It is used to insert a line break within text-similar to pressing "Enter" in a word proccessor.
+
+
+<hr> : The <hr> tag is html stands for horizontal rule.
+       It is used to create a horizontal line across the page, usually to visually separate sections of content.
+
+<em> : It indicates that the text has stress emphasis.
+       It has semantic meaning, useful for accessibility tools like screen readers.
