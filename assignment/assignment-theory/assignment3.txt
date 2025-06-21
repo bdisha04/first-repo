@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 html provides two types of html elements 
 
 a) block : which is covered 100% of width i.e called block elements 
@@ -18,25 +17,4 @@ b) non-block or inline elements :which is non-covered 100% of width i.e called b
               <span></span>
               <i></i>
               <a></a>
-=======
-html provides two types of html elements 
-
-a) block : which is covered 100% of width i.e called block elements 
-
-    examples : <h1></h1>
-               <div></div>
-               <p></p>
-               <footer></footer>
-               <header></header>
-               <form></form>
-               <table></table>
-b) non-block or inline elements :which is non-covered 100% of width i.e called block elements
-
-    examples: <b> 
-              <input>
-              <img>
-              <span></span>
-              <i></i>
-              <a></a>
->>>>>>> d8d2c7e97aa8518a7df64129bf8007de7d398941
               <em></em>
