@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      div {
+        width: 30%;
+        height: auto;
+        margin: auto;
+        margin-top: 3%;
+      }
+      div input,textarea {
+        width: 250px;
+        height: auto;
+        padding: 5px;
+      }
+      input[type='submit'] {
+        width: 150px;
+        height: auto;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border: none;
+      }
+      ::placeholder {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Contact Form</h1>
+      <p>All filed with <span style="color: black">(*)</span> is required</p>
+      <hr />
+      <form method="post" action="welcome.html">
+        <input type="text" placeholder="Name * " required />
+        <br /><br />
+        <input type="email" placeholder="Email * " required />
+        <br /><br />
+        <input
+          type="tel"
+          placeholder="Phone * "
+          pattern="5646547676"
+          required/>
+        <br /><br />
+        <input type="text" placeholder="Subject * " required />
+        <br /><br />
+        <textarea type="text" placeholder="Message * " required></textarea>
+        <br /><br />
+        <input type="submit" value="Send" />
+        <br /><br />
+      </form>
+    </div>
+  </body>
+</html>
