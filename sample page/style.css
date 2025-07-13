@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 668px;
+    background: -webkit-linear-gradient(left,white,gray);
+    background:-moz-linear-gradient(left,white,gray);
+    background: -o-repeating-linear-gradient(left,white,gray);
+    background: linear-gradient(to right,white,gray);
+}
+
+#technology-header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.technology-logo{
+    width:30%;
+    height: 25px;
+    padding-top: 30px 100px;
+}
+
+.technology-logo img{
+    width: 160px;
+    height: 100px;
+    float: left;
+    padding-bottom: 10%; 
+}
+
+.technology-nav{
+    width: 60%;
+    height: auto;
+    padding: 15px;
+}
+
+.technology-nav ul li{
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.technology-nav a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-size: 20px !important;
+    text-transform: uppercase;
+}
+
+.technology-account{
+    width: 10%;
+    height:auto;
+    padding: 15px;
+}
+
+.technology-account button{
+    width: 120px;
+    height: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 30px;
+    border: none;
+    margin-right: 100%;
+    font-size: 15px;
+}
+
+#technology-banner{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-txt{
+    width: 50%;
+    height: auto;
+    padding: 100px 40px;
+}
+
+.banner-img img{
+    width: 100%;
+    height: auto;
+}
+
+.banner-txt h1{
+    font-size: 30px;
+    color: black;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+.banner-txt p{
+    font-size: 14px;
+    color: black;
+    width: 60%;
+}
+
+.banner-txt button{
+    width: 200px;
+    height: auto;
+    padding: 18px;
+    background-color: lightskyblue;
+    border-radius: 30px;
+    border: none;
+    margin-left: 0%;
+    font-size: 18px;
+}
