@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#header{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 5 !important;
+}
+.top-header{
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px;
+  background-color: rgb(211, 217, 222);
+  top: 0;
+  position: sticky;
+  z-index: 5 !important;
+}
+.top-header-navbar{
+  margin-left: 5%;
+}
+.top-header-navbar li{
+  display: inline-block;
+  padding: 8px 35px;
+  text-decoration: none;
+  list-style-type: none;
+}
+.top-header-navbar a{
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  font-size: 20px;
+}
+.fa-map-marker, .fa-facebook, .fa-instagram, .fa-snapchat, .fa-youtube, .fa-twitter{
+  color: blue;
+  font-size: 25px !important;
+}

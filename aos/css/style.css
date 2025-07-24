@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(100,150,100,0.5), rgba(10,200,100,0.5)), 
+    url(https://b.zmtcdn.com/data/pictures/4/21449534/c193c7f51efe3cbfd4f8d5801a49f795.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#content {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 10%;
+  line-height: 0.2;
+}
+#content h1 {
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  animation: 2s flash infinite;
+}
+#content h1 {
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  animation: 2s flash infinite;
+}
+#content p {
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+}
+#aos-app {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 10%;
+}
+#content1 {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 10%;
+  line-height: 0.2;
+}
+#content1 p {
+  text-align: center;
+  color: red;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+#content1 .fa-arrow-down {
+  color: white;
+  font-size: 25px;
+  animation: 7s shakeY infinite;
+}
+#aos-app h1 {
+  text-align: center;
+  font-size: 45px;
+  color: white;
+}
+#aos-app hr {
+  border: solid 1px white;
+}
+.box1 {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  border: solid 8px gray;
+  padding: 50px 35px;
+  float: left;
+  margin-top: 15%;
+}
+.box2 {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin: 20px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  border: solid 8px gray;
+  padding: 50px 35px;
+  float: right;
+  margin-top: 15%;
+}
+.clearfix {
+  clear: both !important;
+}
+
+
+/* mobile media query */
+
+
+@media only screen and (min-width: 320px) and (width: 480px) {
+ #content {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-top: 10%;
+  line-height: 0.2;
+}
+#content h1 {
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  animation: 2s flash infinite;
+}
+#content h1 {
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  animation: 2s flash infinite;
+}
+#content p {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+#aos-app {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-top: 10%;
+}
+#content1 {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-top: 10%;
+  line-height: 0.2;
+}
+#content1 p {
+  text-align: center;
+  color: red;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+#content1 .fa-arrow-down {
+  color: white;
+  font-size: 25px;
+  animation: 7s shakeY infinite;
+}
+#aos-app h1 {
+  text-align: center;
+  font-size: 45px;
+  color: white;
+}
+#aos-app hr {
+  border: solid 1px white;
+}
+.box1 {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  border: solid 8px gray;
+  padding: 50px 35px;
+  float: left;
+  margin-top: 15%;
+}
+.box2 {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin: 20px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  border: solid 8px gray;
+  padding: 50px 35px;
+  float: right;
+  margin-top: 15%;
+}
+.clearfix {
+  clear: both !important;
+} 
+}
