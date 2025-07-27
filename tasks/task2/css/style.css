@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#figma-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background-color: palevioletred;
+}
+
+.figma-logo h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.figma-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.figma-nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.figma-nav a:hover {
+  color: #ffb703;
+}
+
+.figma-account button {
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #000;
+  font-size: 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}

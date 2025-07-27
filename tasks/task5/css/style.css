@@ -1,0 +1,88 @@
+ body {
+      margin: 0;
+      background-color: #3b3f63;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      width: 340px;
+    }
+
+    .calc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .calc-header h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .theme-toggle {
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .theme-toggle span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: red;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+
+    .screen {
+      background-color: #1d1e30;
+      color: white;
+      font-size: 32px;
+      text-align: right;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      background-color: #24263b;
+      padding: 20px;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 15px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ede3d8;
+      color: #1d1e30;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn.operator {
+      background-color: #5e6a96;
+      color: white;
+    }
+
+    .btn.reset {
+      grid-column: span 2;
+      background-color: #5e6a96;
+      color: white;
+    }
+
+    .btn.equal {
+      grid-column: span 2;
+      background-color: #e74c3c;
+      color: white;
+    }
