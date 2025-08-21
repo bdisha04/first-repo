@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Styled Buttons</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    /* Primary Button */
+    .btn-primary {
+      background-color: #3498db;
+    }
+    .btn-primary:hover {
+      background-color: #2980b9;
+    }
+
+    /* Secondary Button */
+    .btn-secondary {
+      background-color: #2ecc71;
+    }
+    .btn-secondary:hover {
+      background-color: #27ae60;
+    }
+
+    /* Danger Button */
+    .btn-danger {
+      background-color: #e74c3c;
+    }
+    .btn-danger:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-danger">Danger</button>
+</body>
+</html>

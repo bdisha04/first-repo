@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pseudo-classes & Pseudo-elements Example</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f9f9f9;
+    }
+
+    /* Links styling */
+    a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    a:hover {
+      color: #2ecc71; /* Green on hover */
+    }
+
+    a:active {
+      color: #e74c3c; /* Red when clicked */
+    }
+
+    a:visited {
+      color: #9b59b6; /* Purple after visited */
+    }
+
+    /* Style first line of paragraph */
+    p::first-line {
+      font-weight: bold;
+      color: #555;
+      font-size: 18px;
+    }
+
+    /* Decorative ::before element for headings */
+    h2::before {
+      content: "★ "; /* Decorative star */
+      color: gold;
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Welcome to My Page</h1>
+  
+  <h2>Useful Links</h2>
+  <a href="https://example.com">Example</a>
+  <a href="https://openai.com">OpenAI</a>
+  <a href="https://wikipedia.org">Wikipedia</a>
+
+  <h2>About</h2>
+  <p>
+    This is a sample paragraph to demonstrate pseudo-elements. The first line has
+    special styling applied using <code>::first-line</code>. Pseudo-classes like 
+    <code>:hover</code>, <code>:active</code>, and <code>:visited</code> change how links
+    look depending on user interaction.
+  </p>
+</body>
+</html>

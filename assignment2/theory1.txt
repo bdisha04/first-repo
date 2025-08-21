@@ -1,0 +1,46 @@
+1. Inline CSS
+
+Written directly inside an HTML element using the style attribute.
+
+Example: <h1 style="color: red; font-size: 20px;">Hello World</h1>
+
+Advantages: Quick for small changes.
+
+Disadvantages: Not reusable, hard to maintain in big projects.
+
+
+2. Internal CSS
+
+Written inside <style> tags within the <head> section of an HTML page.
+
+Example:
+<head>
+  <style>
+    h1 { color: blue; }
+    p { font-size: 16px; }
+  </style>
+</head>
+
+Advantages: Styles apply to the whole page, easier to manage than inline.
+
+Disadvantages: Only works for one page, not reusable across multiple pages.
+
+
+3. External CSS
+
+Written in a separate .css file and linked to HTML with <link>.
+
+Example:
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+style.css file:
+
+h1 { color: green; }
+p { font-family: Arial; }
+
+Advantages: Reusable, clean, best for large websites.
+
+Disadvantages: Requires extra file, needs internet access for linked CSS if hosted externally.

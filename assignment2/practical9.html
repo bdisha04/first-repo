@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Responsive Layout Example</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header, footer {
+      background: #3498db;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive Layout */
+
+    /* For tablets and wider (≥768px) → 2 columns */
+    @media (min-width: 768px) {
+      .container {
+        grid-template-columns: 2fr 1fr; /* main content wider */
+        grid-template-areas:
+          "header header"
+          "section1 section2"
+          "section3 section2"
+          "footer footer";
+      }
+
+      header { grid-area: header; }
+      footer { grid-area: footer; }
+      .section1 { grid-area: section1; }
+      .section2 { grid-area: section2; }
+      .section3 { grid-area: section3; }
+
+      body {
+        font-size: 18px;
+      }
+      .content {
+        padding: 30px;
+      }
+    }
+
+    /* For desktop (≥1024px) → adjust font + spacing */
+    @media (min-width: 1024px) {
+      body {
+        font-size: 20px;
+      }
+      .content {
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+      <h1>Responsive Layout</h1>
+    </header>
+
+    <div class="content section1">
+      <h2>Section 1</h2>
+      <p>This is the first content section.</p>
+    </div>
+
+    <div class="content section2">
+      <h2>Section 2</h2>
+      <p>This is the second content section.</p>
+    </div>
+
+    <div class="content section3">
+      <h2>Section 3</h2>
+      <p>This is the third content section.</p>
+    </div>
+
+    <footer>
+      <p>Footer Content</p>
+    </footer>
+  </div>
+</body>
+</html>

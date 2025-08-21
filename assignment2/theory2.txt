@@ -1,0 +1,38 @@
+1)CSS Selectors:
+
+CSS selectors are patterns used to select HTML elements so that styles can be applied to them.
+They tell the browser which elements to style.
+
+
+
+2)Types of CSS Selectors:
+
+i) Element Selector:
+
+Selects all elements of a specific HTML tag.
+
+example:    p {
+                color: blue;
+            }
+
+Changes color of all <p> elements to blue.
+
+ii)Class Selector:
+
+Selects elements with a specific class (using .).
+
+example:    .highlight {
+                background-color: yellow;
+            }
+
+Applies yellow background to any element with class="highlight".
+
+iii)ID Selector:
+
+Selects a specific element with an id (using #).
+
+example:    #main-title {
+                font-size: 24px;
+            }
+
+Applies style only to the element with id="main-title".

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSS Variables Theme Example</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    /* Define CSS variables */
+    :root {
+      --primary-color: #3498db;   /* Blue */
+      --secondary-color: #2ecc71; /* Green */
+      --text-color: #333;         /* Dark Gray */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    main {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 2px solid var(--secondary-color);
+    }
+
+    footer {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 15px;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <h1>My Web Page</h1>
+  </header>
+
+  <main>
+    <h2>Welcome!</h2>
+    <p>This is the main content area. The colors here are controlled by CSS variables.</p>
+  </main>
+
+  <footer>
+    <p>Footer Section</p>
+  </footer>
+</body>
+</html>

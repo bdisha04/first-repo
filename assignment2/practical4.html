@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Styling Lists</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    /* Remove default list markers */
+    ul, ol {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    /* Unordered list custom marker */
+    ul li::before {
+      content: "✔ ";   /* custom check mark */
+      color: green;    /* custom marker color */
+      font-weight: bold;
+    }
+
+    /* Ordered list custom marker */
+    ol li::before {
+      content: "★ ";   /* star as marker */
+      color: orange;
+      font-weight: bold;
+    }
+
+    /* Style for list items */
+    li {
+      font-size: 18px;
+      color: #444;
+      margin: 8px 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+    <h2>Unordered List (Custom Marker)</h2>
+  <ul>
+    <li>HTML Basics</li>
+    <li>CSS Styling</li>
+    <li>JavaScript Functions</li>
+  </ul>
+
+  <h2>Ordered List (Custom Marker)</h2>
+  <ol>
+    <li>Introduction</li>
+    <li>Body Content</li>
+    <li>Conclusion</li>
+  </ol>
+</body>
+</html>

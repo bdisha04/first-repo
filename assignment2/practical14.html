@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Product Card</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Product Card */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .card-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0059b3;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+    <div class="card">
+    <img src="https://via.placeholder.com/300x200" alt="Product Image">
+    <div class="card-content">
+      <div class="card-title">Stylish Headphones</div>
+      <div class="card-desc">
+        Experience premium sound quality with noise cancellation and sleek design.
+      </div>
+      <div class="card-price">$120.00</div>
+    </div>
+  </div>
+</body>
+</html>

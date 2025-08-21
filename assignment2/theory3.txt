@@ -1,0 +1,48 @@
+1)CSS Box Model:
+
+In CSS, every element on a webpage is treated as a rectangular box.
+The box model explains how the size of that box is calculated and how elements interact with each other.
+
+2)Components:
+
+1. Content
+
+The actual text, image, or data inside the element.
+
+Example: the words inside a <p> tag.
+
+You can set its size with width and height.
+
+2. Padding
+
+The space between the content and the border.
+
+It makes the content look less cramped.
+
+Example:    p {
+                padding: 10px;
+            }
+
+Adds 10px space inside the border, around the text.
+
+3. Border
+
+The edge that wraps around the content and padding.
+
+You can style it with thickness, color, and type.
+
+Example:    div {
+                border: 2px solid black;
+            }
+
+Creates a 2px solid black border around the element.
+
+4. Margin
+
+The space outside the border, separating the element from others.
+
+Example:    h1 {
+                margin: 20px;
+            }
+
+Adds 20px space outside the element, pushing it away from neighbors.
