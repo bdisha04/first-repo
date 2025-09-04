@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megazzine - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-white d-flex align-items-center"
+          style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+                 url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;">
+    <div class="container text-center">
+      <h1 class="display-3 fw-bold">MEGAZZINE</h1>
+      <p class="lead mb-4">Your Daily Dose of Articles, Photos & Community</p>
+      <a href="articles.html" class="btn btn-lg btn-warning fw-bold shadow">Start Reading</a>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Megazzine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Latest Articles -->
+  <section class="container my-5">
+    <h2 class="section-title text-center mb-4">🔥 Trending Articles</h2>
+    <div class="row g-4">
+      <!-- Tech -->
+      <div class="col-md-4">
+        <div class="card article-card">
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+               class="card-img-top" alt="Tech">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-robot text-primary"></i> Tech Innovations</h5>
+            <p class="card-text">AI, automation, and the future of technology.</p>
+            <a href="articles.html" class="btn btn-outline-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Fashion -->
+      <div class="col-md-4">
+        <div class="card article-card">
+          <img src="https://images.stockcake.com/public/5/a/6/5a693971-925f-413b-8051-563fd32990f8_medium/emerald-in-motion-stockcake.jpg" 
+               class="card-img-top" alt="Fashion">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-shirt text-danger"></i> Fashion Forward</h5>
+            <p class="card-text">Latest fashion movements worldwide.</p>
+            <a href="articles.html" class="btn btn-outline-danger btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Sports -->
+      <div class="col-md-4">
+        <div class="card article-card">
+          <img src="https://media.istockphoto.com/id/481032919/photo/soccer-player-tackling-a-ball-on-stadium.jpg?s=612x612&w=0&k=20&c=AEcn4z_rLzo9Gdon3v7-5NBIV_jPC3yEUZFTovM_8Nc=" 
+               class="card-img-top" alt="Sports">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-futbol text-success"></i> Sports Weekly</h5>
+            <p class="card-text">Catch the latest sports buzz & updates.</p>
+            <a href="articles.html" class="btn btn-outline-success btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sidebar + Ads -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="fw-bold text-success">Sponsored Ads</h3>
+        <div class="alert alert-info text-center fw-bold">✨ Ad Space - 728x90 Banner ✨</div>
+      </div>
+      <aside class="col-md-4">
+        <div class="p-3 mb-4 rounded shadow-sm bg-white">
+          <h4 class="mb-3 text-primary">Categories</h4>
+          <div>
+            <span class="badge bg-primary">Tech</span>
+            <span class="badge bg-danger">Fashion</span>
+            <span class="badge bg-success">Sports</span>
+            <span class="badge bg-warning text-dark">Travel</span>
+          </div>
+        </div>
+        <div class="p-3 rounded shadow-sm bg-white">
+          <h4 class="mb-3 text-primary">Tags</h4>
+          <span class="badge bg-dark">#Trending</span>
+          <span class="badge bg-info">#Lifestyle</span>
+          <span class="badge bg-warning text-dark">#Wellness</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About</h5>
+          <p>Megazzine brings you the latest stories, photos, and discussions from around the globe.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="articles.html" class="text-white">Articles</a></li>
+            <li><a href="photos.html" class="text-white">Photos</a></li>
+            <li><a href="community.html" class="text-white">Community</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+      <hr class="border-light">
+      <p class="text-center mb-0">&copy; 2025 Megazzine | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

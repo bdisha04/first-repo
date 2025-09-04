@@ -1,0 +1,55 @@
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+  height: 500px;
+}
+
+/* Navbar */
+.custom-nav {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: bold;
+  color: #6a11cb;
+  text-transform: uppercase;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #00c6ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Article Cards */
+.article-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.article-card h5 {
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #6a11cb, #0072ff, #00c6ff);
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600") 
+              no-repeat center center/cover;
+  height: 500px;
+}
+
