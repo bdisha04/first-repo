@@ -1,0 +1,14 @@
+2. Explain the Bootstrap grid system and how it helps create responsive layouts.
+
+The grid system in Bootstrap divides the page into 12 equal parts (columns).
+We can use these columns to arrange content in rows and sections.
+
+Example:
+
+.col-6 → takes half (6 out of 12 columns).
+.col-4 → takes one-third (4 out of 12 columns).
+
+It helps make websites responsive because:
+
+On big screens, content shows side by side.
+On small screens, content stacks on top of each other.

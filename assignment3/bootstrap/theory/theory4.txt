@@ -1,0 +1,20 @@
+1. How modals and carousels work in Bootstrap?
+
+Modal
+
+A modal is a pop-up box that shows information or a form without leaving the page.
+
+Example: A "Contact Me" form that appears when you click a button.
+
+It works using Bootstrap’s JavaScript and special attributes like data-bs-toggle="modal".
+
+
+Carousel
+
+A carousel is a slideshow of images or content.
+
+Example: An image slider that automatically changes every few seconds.
+
+It works using Bootstrap’s carousel component, where you add images inside .carousel-item.
+
+You can also add arrows or dots to move between slides.

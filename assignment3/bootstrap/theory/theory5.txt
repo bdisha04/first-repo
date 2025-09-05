@@ -1,0 +1,15 @@
+2. Purpose of utility classes in Bootstrap (with examples)
+
+Utility classes are small, ready-made classes that let you quickly style elements without writing extra CSS.
+They help in fast design and consistent look.
+
+
+Examples:
+
+Spacing: m-3 (margin), p-4 (padding)
+
+Text: text-center, fw-bold (bold text), text-danger (red text)
+
+Display: d-flex, d-none
+
+Colors: bg-primary, text-white

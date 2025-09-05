@@ -1,0 +1,30 @@
+What is Utility-First CSS?
+
+Utility-first CSS means using small, single-purpose classes to style elements directly in your HTML.
+Each class does only one job (like set text color, margin, or background).
+Instead of writing custom CSS rules, you combine these small classes to design your webpage.
+
+
+Example (Tailwind CSS):
+
+<p class="text-red-500 text-center p-4">Hello, I am styled with utility classes!</p>
+
+
+Here:
+
+text-red-500 = red text
+text-center = center align
+p-4 = padding
+
+
+Advantages of Utility-First CSS
+
+i)Faster development → No need to write extra CSS files, just use ready-made classes.
+
+ii)Consistent design → Same spacing, colors, and sizes across the website.
+
+iii)Less custom CSS → Reduces messy CSS code, since most styles come from utilities.
+
+iv)Easier to maintain → If you want to change a style, you just change the class in HTML (no searching in CSS files).
+
+v)Highly customizable → You can mix and match classes to create your own unique design.

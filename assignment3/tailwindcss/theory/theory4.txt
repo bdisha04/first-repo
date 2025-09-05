@@ -1,0 +1,35 @@
+Tailwind’s Configuration File (tailwind.config.js)
+
+When you set up Tailwind in a project, it creates a file called tailwind.config.js.
+This file is like a control center where you can customize Tailwind.
+Instead of only using the default colors, fonts, and spacing, you can add your own design system here.
+
+
+What you can do with it:
+
+i)Change default colors (e.g., make your own primary color).
+ii)Set custom fonts (e.g., use Google Fonts like Poppins or Roboto).
+iii)Adjust spacing and sizes (e.g., make p-7 mean 28px padding).
+iv)Enable/disable features you don’t need (for smaller CSS size).
+v)Add themes for light mode and dark mode.
+
+Example:
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#ff5722',   // custom orange color
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'], // custom font
+      },
+    },
+  },
+}
+
+
+<button class="bg-primary text-white font-sans px-4 py-2 rounded">
+  Custom Button
+</button>

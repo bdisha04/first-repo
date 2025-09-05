@@ -1,0 +1,30 @@
+What is Tailwind CSS?
+
+Tailwind CSS is a modern CSS framework that helps you design websites quickly.
+Instead of giving you ready-made components (like Bootstrap’s navbar or buttons), Tailwind gives you utility classes (small, single-purpose classes).
+You combine these classes directly in your HTML to style elements.
+
+
+Example:
+
+<button class="bg-blue-500 text-white px-4 py-2 rounded">Click Me</button>
+
+
+Here:
+
+bg-blue-500 = blue background
+text-white = white text
+px-4 py-2 = padding
+rounded = rounded corners
+
+
+
+How Tailwind is different from traditional CSS frameworks (like Bootstrap):
+
+i)Utility-first → Tailwind uses small utility classes (text-center, bg-red-500) instead of pre-designed components.
+
+ii)Highly customizable → You control the design (colors, spacing, fonts) easily in the Tailwind config.
+
+iii)No fixed design → Bootstrap gives a default "Bootstrap look," but Tailwind has no fixed style – your website looks unique.
+
+iv)Less custom CSS needed → Since you style directly in HTML, you write very little extra CSS.

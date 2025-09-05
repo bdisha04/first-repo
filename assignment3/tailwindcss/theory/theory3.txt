@@ -1,0 +1,35 @@
+Five Common Tailwind Classes
+
+i)text-center
+
+Aligns text to the center.
+
+<p class="text-center">This text is centered</p>
+
+
+ii)bg-blue-500
+
+Gives a blue background color (shade 500).
+
+<div class="bg-blue-500 text-white p-4">Blue Box</div>
+
+
+iii)p-4
+
+Adds padding (space inside) all around the element.
+
+<div class="p-4 border">Box with padding</div>
+
+
+iv)rounded-lg
+
+Makes corners rounded (like a card or button).
+
+<button class="bg-green-500 text-white rounded-lg px-4 py-2">Click Me</button>
+
+
+v)shadow-md
+
+Adds a medium shadow, making the element look lifted.
+
+<div class="shadow-md p-4">Box with shadow</div>

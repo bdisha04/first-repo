@@ -1,0 +1,10 @@
+1. What is Bootstrap, and why is it useful for website design?
+
+Bootstrap is a free tool (framework) that helps us design websites quickly.
+It already has ready-made styles for things like buttons, forms, navigation bars, and layouts.
+
+It is useful because:
+
+Saves time (no need to write all CSS from scratch).
+Makes websites look good on all screen sizes (mobile, tablet, laptop).
+Keeps the design clean and consistent.

@@ -1,0 +1,16 @@
+3. List and explain at least three Bootstrap components.
+
+i) Navbar
+
+A ready-made menu bar at the top of the website.
+Works on both desktop and mobile (collapses into a button on small screens).
+
+ii) Cards
+
+A small box that can contain an image, title, text, and button.
+Used for portfolios, products, or blogs.
+
+iii) Buttons
+
+Pre-designed buttons with different colors and sizes.
+Example: .btn-primary (blue button), .btn-success (green button).

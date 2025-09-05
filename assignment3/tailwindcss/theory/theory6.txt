@@ -1,0 +1,47 @@
+Custom Colors and Spacing in Tailwind
+
+Tailwind comes with a default set of colors (blue, red, green, etc.) and spacing (p-4, m-2, etc.).
+But sometimes, you want to use your own brand colors or different spacing values.
+That’s where the tailwind.config.js file helps.
+
+
+1. Adding Custom Colors
+
+In the config file, you can add your own colors:
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#ff5722',  // custom orange
+        brandBlue: '#1e40af' // custom blue
+      },
+    },
+  },
+}
+
+
+<button class="bg-primary text-white px-4 py-2 rounded">Orange Button</button>
+<p class="text-brandBlue">This is brand blue text</p>
+
+
+2. Adding Custom Spacing
+
+You can also set your own spacing sizes:
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        72: '18rem', // new size
+        84: '21rem',
+        96: '24rem',
+      },
+    },
+  },
+}
+
+
+<div class="p-72 bg-gray-200">Big padding box</div>

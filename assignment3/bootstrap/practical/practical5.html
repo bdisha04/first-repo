@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customized Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bs-primary: #ff5722;
+      --bs-secondary: #6c757d;
+      --bs-success: #4caf50;
+    }
+
+    .btn-custom {
+      background-color: var(--bs-primary);
+      color: white;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      background-color: #e64a19;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<div class="container text-center py-5">
+  <h1 class="mb-4 text-primary">Customized Bootstrap</h1>
+  
+  <button class="btn btn-primary m-2">Default Primary Button</button>
+
+  <button class="btn btn-custom m-2">Custom Button</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

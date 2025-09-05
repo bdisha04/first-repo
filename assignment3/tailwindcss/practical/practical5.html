@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Light Purple Theme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "soft-purple": "#F3E8FF",  
+            "lavender": "#C4B5FD",  
+            "deep-purple": "#8B5CF6",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-soft-purple min-h-screen flex items-center justify-center">
+
+  <div class="bg-white shadow-xl rounded-2xl w-full max-w-md p-8">
+    <h1 class="text-3xl font-bold text-center text-deep-purple mb-6">Welcome Back</h1>
+    <p class="text-center text-gray-600 mb-6">Login to continue</p>
+
+    <form class="space-y-5">
+      <div>
+        <label class="block text-gray-700 mb-2">Email</label>
+        <input type="email" placeholder="Enter your email" 
+          class="w-full px-4 py-3 border border-lavender rounded-lg focus:ring-2 focus:ring-deep-purple focus:outline-none">
+      </div>
+      
+      <div>
+        <label class="block text-gray-700 mb-2">Password</label>
+        <input type="password" placeholder="Enter your password" 
+          class="w-full px-4 py-3 border border-lavender rounded-lg focus:ring-2 focus:ring-deep-purple focus:outline-none">
+      </div>
+
+      <button type="submit" 
+        class="w-full bg-deep-purple text-white py-3 rounded-lg shadow hover:bg-lavender hover:text-purple-900 transition">
+        Login
+      </button>
+
+    <div class="text-center mt-6">
+      <a href="#" class="text-deep-purple font-medium hover:underline">Forgot Password?</a>
+    </div>
+    <p class="text-center text-gray-600 mt-4">
+      Don’t have an account? 
+      <a href="#" class="text-deep-purple font-semibold hover:underline">Sign Up</a>
+    </p>
+  </div>
+
+</body>
+</html>
