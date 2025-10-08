@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'cart-green': '#4CAF50',
+                        'cart-light-gray': '#f5f5f5',
+                        'cart-border-gray': '#e0e0e0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensuring the body and HTML use the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Light background */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+
+        /* Custom styling for quantity buttons */
+        .qty-btn {
+            @apply flex items-center justify-center p-2 h-9 w-9 text-gray-700 bg-cart-light-gray rounded-lg transition-colors duration-150 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed;
+        }
+        
+        /* Custom styling for the quantity input field */
+        .qty-input {
+            @apply w-12 h-9 text-center border-y border-cart-border-gray bg-white text-gray-800 font-medium focus:outline-none;
+            -moz-appearance: textfield; /* Firefox */
+        }
+        .qty-input::-webkit-outer-spin-button,
+        .qty-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Cart Container -->
+    <div id="cart-container" class="w-full max-w-4xl bg-white shadow-2xl shadow-cart-green/20 rounded-xl overflow-hidden border-8 border-cart-green">
+        
+        <!-- Header -->
+        <div class="p-6 border-b border-cart-border-gray">
+            <h1 class="text-3xl font-semibold text-gray-900">My Cart</h1>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cart-items-list" class="divide-y divide-cart-border-gray">
+            <!-- Items will be rendered here by JavaScript -->
+        </div>
+
+        <!-- Subtotal/Total Section (Simple version for this component) -->
+        <div id="cart-summary" class="p-6 bg-cart-light-gray border-t border-cart-border-gray flex justify-end">
+            <div class="text-lg font-medium text-gray-800">
+                Total (<span id="cart-item-count">3</span> items): <span id="cart-total-price" class="font-bold text-gray-900 ml-2">$0.00</span>
+            </div>
+        </div>
+
+        <!-- Notification Message Box -->
+        <div id="notification-box" class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-xl hidden transition-opacity duration-300 opacity-0">
+            Item updated!
+        </div>
+
+    </div>
+
+    <script>
+        // --- DATA ---
+        let cartItems = [
+            { id: 1, name: "White Magic Ring Handmade Macrame Bag", color: "White", price: 2499.00, quantity: 1, isWishlisted: false, imageUrl: "https://brownliving.in/cdn/shop/products/white-magic-ring-handmade-macrame-bag-sarmaya-sustainable-bags-brown-living-180520.jpg?v=1708473408" },
+            { id: 2, name: "Lavie Venus", color: "Rose Gold", price: 1999.00, quantity: 1, isWishlisted: true, imageUrl: "https://www.lavieworld.com/cdn/shop/files/WTPG1369195M3_1.jpg?v=1756803262" },
+            { id: 3, name: "Sneakers", color: "Brown", price: 3499.00, quantity: 1, isWishlisted: false, imageUrl: "https://m.media-amazon.com/images/I/71pl8w5xXJL._UY1000_.jpg" }
+        ];
+
+        // --- CONSTANTS & DOM ELEMENTS ---
+        const MIN_QTY = 1;
+        const MAX_QTY = 10;
+        const cartListElement = document.getElementById('cart-items-list');
+        const totalPriceElement = document.getElementById('cart-total-price');
+        const itemCountElement = document.getElementById('cart-item-count');
+        const notificationBox = document.getElementById('notification-box');
+
+        // --- UTILITY FUNCTIONS ---
+
+        /** Formats a number into USD currency string. */
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(amount);
+        }
+
+        /** Shows a temporary notification message. */
+        function showNotification(message) {
+            notificationBox.textContent = message;
+            notificationBox.classList.remove('hidden', 'opacity-0');
+            notificationBox.classList.add('opacity-100');
+
+            clearTimeout(notificationBox.timer);
+            notificationBox.timer = setTimeout(() => {
+                notificationBox.classList.remove('opacity-100');
+                notificationBox.classList.add('opacity-0');
+                setTimeout(() => notificationBox.classList.add('hidden'), 300);
+            }, 2000);
+        }
+
+        // --- CORE LOGIC ---
+
+        /**
+         * Finds item index, validates quantity, updates state, and triggers re-render.
+         * @param {number} itemId - The ID of the item to update.
+         * @param {number} newQuantity - The desired new quantity.
+         */
+        function updateCart(itemId, newQuantity) {
+            const itemIndex = cartItems.findIndex(item => item.id === itemId);
+            if (itemIndex === -1) return;
+
+            // Clamp quantity to [MIN_QTY, MAX_QTY]
+            const finalQuantity = Math.max(MIN_QTY, Math.min(MAX_QTY, newQuantity));
+            
+            if (cartItems[itemIndex].quantity !== finalQuantity) {
+                cartItems[itemIndex].quantity = finalQuantity;
+                renderCart();
+                showNotification(`Quantity for ${cartItems[itemIndex].name} updated to ${finalQuantity}.`);
+            } else if (newQuantity > MAX_QTY) {
+                showNotification(`Maximum quantity is ${MAX_QTY}.`);
+            } else if (newQuantity < MIN_QTY) {
+                showNotification(`Minimum quantity is ${MIN_QTY}.`);
+            }
+        }
+
+        /** Handles click events for quantity change (+/- buttons). */
+        window.handleQtyChange = (itemId, delta) => {
+            const item = cartItems.find(item => item.id === itemId);
+            if (item) {
+                updateCart(itemId, item.quantity + delta);
+            }
+        };
+        
+        /** Handles direct input change validation. */
+        window.handleInputQtyChange = (itemId, inputElement) => {
+            let value = parseInt(inputElement.value) || MIN_QTY;
+            
+            // Correct the input element's value directly
+            if (value > MAX_QTY) {
+                inputElement.value = MAX_QTY;
+            } else if (value < MIN_QTY) {
+                inputElement.value = MIN_QTY;
+            }
+            
+            updateCart(itemId, parseInt(inputElement.value));
+        };
+
+        /** Removes an item from the cart. */
+        window.removeItem = (itemId) => {
+            const item = cartItems.find(item => item.id === itemId);
+            if (item) {
+                cartItems = cartItems.filter(item => item.id !== itemId);
+                renderCart();
+                showNotification(`${item.name} removed from bag.`);
+            }
+        };
+
+        /** Toggles the wishlist status of an item. */
+        window.toggleWishlist = (itemId) => {
+            const itemIndex = cartItems.findIndex(item => item.id === itemId);
+            if (itemIndex !== -1) {
+                const item = cartItems[itemIndex];
+                item.isWishlisted = !item.isWishlisted;
+                renderCart();
+                showNotification(`${item.name} ${item.isWishlisted ? 'added to' : 'removed from'} wishlist.`);
+            }
+        };
+
+        /** Calculates and updates the overall cart total and item count. */
+        function updateCartSummary() {
+            const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+            totalPriceElement.textContent = formatCurrency(total);
+            itemCountElement.textContent = cartItems.length; // Counting unique items in the bag
+        }
+
+        /** Renders the cart items list based on the current state. */
+        function renderCart() {
+            cartListElement.innerHTML = '';
+            
+            if (cartItems.length === 0) {
+                cartListElement.innerHTML = `
+                    <div class="p-6 text-center text-gray-500 text-lg">
+                        Your Shopping Bag is empty.
+                    </div>
+                `;
+            } else {
+                cartItems.forEach(item => {
+                    const itemHtml = `
+                        <div id="item-${item.id}" class="flex items-start p-6 hover:bg-cart-light-gray transition-colors">
+                            
+                            <!-- Remove & Wishlist Icons -->
+                            <div class="flex flex-col items-center mr-4 pt-2">
+                                <button onclick="removeItem(${item.id})" class="text-gray-400 hover:text-red-500 transition-colors mb-2 text-xl font-light">
+                                    &times; <!-- 'X' icon for remove -->
+                                </button>
+                                <button onclick="toggleWishlist(${item.id})" class="text-xl transition-colors">
+                                    <!-- Heart Icon -->
+                                    <svg class="w-5 h-5 ${item.isWishlisted ? 'text-red-500 fill-current' : 'text-gray-400 hover:text-red-400'}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Product Image -->
+                            <div class="flex-shrink-0 mr-6">
+                                <img src="${item.imageUrl}" alt="${item.name}" onerror="this.onerror=null; this.src='https://placehold.co/100x100/e5e7eb/6b7280?text=IMG'" class="w-24 h-24 object-cover rounded-lg border border-cart-border-gray">
+                            </div>
+
+                            <!-- Product Details & Controls -->
+                            <div class="flex-grow flex justify-between items-start">
+                                
+                                <!-- Product Text -->
+                                <div class="flex flex-col">
+                                    <span class="text-base font-semibold text-gray-900">${item.name}</span>
+                                    <span class="text-sm text-gray-600">${item.color}</span>
+                                    <span class="text-xs text-gray-400 mt-1">Item ID: ${item.id}</span>
+                                </div>
+                                
+                                <!-- Quantity Controls & Price -->
+                                <div class="flex items-center space-x-6">
+                                    <!-- Quantity Input Group -->
+                                    <div class="flex items-center">
+                                        <button onclick="handleQtyChange(${item.id}, -1)" class="qty-btn" ${item.quantity <= MIN_QTY ? 'disabled' : ''}>&minus;</button>
+                                        <input 
+                                            type="number" 
+                                            value="${item.quantity}" 
+                                            min="${MIN_QTY}" 
+                                            max="${MAX_QTY}" 
+                                            class="qty-input" 
+                                            onchange="handleInputQtyChange(${item.id}, this)"
+                                            onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+                                        >
+                                        <button onclick="handleQtyChange(${item.id}, 1)" class="qty-btn" ${item.quantity >= MAX_QTY ? 'disabled' : ''}>&plus;</button>
+                                    </div>
+                                    
+                                    <!-- Price -->
+                                    <div class="text-lg font-bold text-gray-900 w-24 text-right">
+                                        ${formatCurrency(item.price * item.quantity)}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    cartListElement.insertAdjacentHTML('beforeend', itemHtml);
+                });
+            }
+
+            // Always update the total price and item count
+            updateCartSummary();
+        }
+
+        // Initial render when the page loads
+        document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+</body>
+</html>
