@@ -1,0 +1,66 @@
+Loop
+A loop is a programming language that is used to reapeat no of iteration again and again
+
+Why do we use loops?
+1) iterating through collection:
+2) repeating a task:
+3) efficiency:
+
+Types of loop:
+1) For loop
+2) While loop
+3) Do while loop
+4) For in loop
+5) For of loop
+6) For each loop
+1) For loop: the for loop is used when you know the exact number of times you want to repeat a block of code.
+	
+Syntax: for (initialization; condition; update) {
+		// code to be execute
+		}
+
+-->initialization: you deine and initialize a variable that controls the loop.
+-->condition: this is a test expression that is evaluate before each iteration the condition is true.
+
+example:
+
+
+2) While loop: While loop runs as long as the given condition is true
+
+Syntax: while (condition)
+	{
+		//code to be executed
+		//updation
+	}
+
+example:
+
+
+3) Do while loop: the loop is similar to the while loop, but the key difference is that the condition is checked after the code is executed.
+		  do wile be executed once time either true or false after check 
+
+Syntax: do
+	{
+		//code to be executed
+	} while (condition);
+
+example:
+
+
+4) For in loop: the loop is specifically used for iterating over objects (not arrays).
+		on each iteration, the key variable holds the name of the current property.
+
+Syntax: let key in person 
+
+example:
+
+
+5) For of loop:  the loop is used t lo through values in an itrable (like an aray, sring or other iterable object)
+
+Syntax:
+ 
+
+6) for each loop: foreach is a loop that can be convert any array as its list
+
+Syntax:
+

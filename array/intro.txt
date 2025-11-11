@@ -1,0 +1,48 @@
+Array:
+
+An array in javascript is a data structure used to store multiple value in single variable.. that is called array
+-->having same name but different data types.
+
+Characteristcs of array:
+
+1) index collection
+2) order
+3) dynamic size
+4) hetorogeneous
+
+Creating an array
+1) using array as litterals
+
+List of array functions:
+
+1) push()
+2) pop()
+3) unshift()
+4) shift()
+5) length()
+6) indexof()
+7) tostring() convert array to string 
+8) join() convert array to string with separator
+9) reverse() reverse the array
+10) sort() sort the array
+11) asort() sort the array is descending order
+12) ksort() sort the array by key
+13) krsort() sort the array by key in descending order
+14) slice() extract a section of array
+15) splice() add/remove elements 
+16) concat() merge to 
+17) map() create a new array  by applying a function to each element 
+
+Array using new keyword or array as constructor 
+
+
+
+
+String in js:
+
+A string is a set of charactor that is reperesented as  text
+A string is encloesd within a single or double quotes
+
+Creating  a string
+1) using string litterals(single or double quotes)
+2)

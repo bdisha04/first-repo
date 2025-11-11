@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>element selector</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        .log {
+            width: 30%;
+            height: auto;
+            margin: auto;
+            padding: 45px;
+            margin-top: 5%;
+            box-shadow: 1px 2px 4px black;
+            text-align: center;
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".app").css({ "width": "60%", height: "auto", "margin": "auto" });
+            $("#hde").click(function () {
+                // $("#paragraph").hide();
+                // $("#paragraph").hide(2000);
+                // $("#paragraph").hide("slow");
+                // $("#paragraph").hide("fast");
+                $("#paragraph").hide({
+                    fx: "slow",
+                    duration: 4000
+                });
+            });
+            $("#shw").click(function () {
+                $("#paragraph").show({
+                    fx: "slow",
+                    duration: 500
+                });
+            });
+
+            $("#togg").click(function () {
+                $("#paragraph ").toggle({
+                    fx: "slow",
+                    duration: 500
+                });
+            });
+
+            $("#login").click(function () {
+                $(".log").toggle({
+                    fx: "slow",
+                    duration: 500
+                });
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="app">
+        <button type="button" id="hde">Hide</button>
+        <button type="button" id="shw">Show</button>
+        <button type="button" id="togg">Toggle</button>
+        <button type="button" id="login">Login</button>
+
+        <p id="paragraph">Rajkot is a city in the western Indian state of Gujarat. In central Jubilee Garden are the
+            Lang Library, with Gujarati literature, and the Watson Museum, with paintings and artifacts documenting
+            British colonial rule. Kaba Gandhi No Delo, the house where Mahatma Gandhi spent part of his childhood,
+            displays photos of the Indian leader and his belongings. The Rotary Dolls Museum exhibits dolls from around
+            the world.</p>
+    </div>
+    <div class="log">
+        <h1>Login here</h1>
+    </div>
+</body>
+
+</html>

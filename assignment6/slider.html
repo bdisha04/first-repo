@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        #slider {
+            width: 50%;
+            height: 400px;
+            padding-left: 25%;
+            padding-top: 10%;
+        }
+        #slide img {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://malsup.github.io/min/jquery.cycle2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#slide").cycle({
+                fx: "zoom",
+                duration: 4000
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="slider">
+        <div id="slide">
+            <img src="https://www.shutterstock.com/image-photo/night-metropolitan-bangkok-city-downtown-600nw-2157460537.jpg" />
+            <img src="https://images.unsplash.com/photo-1596416865741-c24d28994ef6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8" />
+            <img src="https://img.freepik.com/free-photo/downtown-business-district-bangkok-thailand_554837-448.jpg?semt=ais_hybrid&w=740&q=80" />
+            <img src="https://media.istockphoto.com/id/542727462/photo/houston-texas-skyline.jpg?s=612x612&w=0&k=20&c=ldhxhUFIIaST-o064dsyyzMSV76Eqt0fpjMJUWTP0Is=" />
+        </div>
+    </div>
+</body>
+</html>
