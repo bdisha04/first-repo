@@ -21,6 +21,10 @@
     border: 5px solid #00695c;
     border-radius: 50%;
   }
+
+  .profile-image-wrapper {
+    text-align: center;
+  }
   
   .sidebar ul {
     display: flex;
