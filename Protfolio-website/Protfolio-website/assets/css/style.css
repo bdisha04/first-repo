@@ -113,6 +113,7 @@
   main {
     background: url(../img/bg.png) repeat;
     padding-left: 300px;
+
   }
   
   .container {
@@ -223,18 +224,125 @@
     background-color:   #004d40 !important;
   }
   
-  @media (max-width: 992px) {
+  
+
+
+
+
+/* Tablets and below */
+@media (max-width: 992px) {
     main {
-      padding-left: 0;
+        padding-left: 0;
     }
-  }
-  
-  @media (max-width: 600px) {
+    .container {
+        margin-left: 10px;
+        width: 95%;
+    }
+    #intro .container {
+        flex-direction: column;
+        top: 20%;
+        transform: translateY(-50%);
+    }
+    .section {
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    #about{
+      padding-top: 30%;
+    }
+    .nav-item about, skills,education, contact{
+      
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
     #intro h2 {
-      font-size: 2.5rem;
+        font-size: 2rem;
     }
-  
     #intro h5 {
-      font-size: 1.2rem;
+        font-size: 1rem;
     }
-  }
+
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    .readme,
+    .contactme {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 600px) {
+
+    #intro .container {
+        top: 25%;
+        right: 5%;
+    }
+
+    .profile-pic {
+        max-width: 100px;
+        max-height: 100px;
+        margin: 0 auto;
+    }
+
+    #intro h2 {
+        font-size: 1.8rem;
+    }
+    #intro h5 {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .card .card-content {
+        padding: 20px;
+    }
+
+    h3.page-title {
+        padding: 20px;
+        font-size: 1.6rem;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 420px) {
+
+    .icon-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 35px;
+    }
+
+    .readme,
+    .contactme {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+
+    #skills .col {
+        width: 50% !important;
+        margin-bottom: 20px;
+    }
+}

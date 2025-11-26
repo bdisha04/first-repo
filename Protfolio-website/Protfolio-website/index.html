@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/sidebar.css" />
 </head>
 
-<body>
+<body id="page-container">
 
   <div class="overlay"></div>
   <div>
@@ -278,45 +278,72 @@
 
   <!-- Typed.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script>
-    var typed = new Typed('.typing', {
-      strings: ["Aspiring Developer", "Learner", "Creative Thinker"],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
-    });
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    var typed = new Typed('.typing', {
+      strings: ["Aspiring Developer", "Learner", "Creative Thinker"],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40
+    });
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const sidebar = document.getElementById('sidebar');
-      const mainContent = document.getElementById('main-content');
-      const sidebarToggle = document.getElementById('sidebar-toggle');
-      const overlay = document.querySelector('.overlay');
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebar = document.getElementById('sidebar');
+      const mainContent = document.getElementById('main-content');
+      const sidebarToggle = document.getElementById('sidebar-toggle');
+      const overlay = document.querySelector('.overlay');
+      const navLinks = document.querySelectorAll('#sidebar .nav-link');
+      
+      // Initialize Materialize ScrollSpy on the body sections
+      M.ScrollSpy.init(document.querySelectorAll('.scrollspy'));
 
-      sidebarToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('show');
-        mainContent.classList.toggle('shifted');
-        overlay.classList.toggle('show');
-        mainContent.classList.toggle('blurred');
+      // Function to reset/close the sidebar state (removes all active classes)
+      function closeSidebar() {
+          sidebar.classList.remove('show');
+          mainContent.classList.remove('shifted');
+          overlay.classList.remove('show');
+          mainContent.classList.remove('blurred');
+      }
+
+      sidebarToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('show');
+        mainContent.classList.toggle('shifted');
+        overlay.classList.toggle('show');
+        mainContent.classList.toggle('blurred');
+      });
+
+      // Close sidebar when clicking the overlay (outside the sidebar)
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a navigation link AND trigger smooth scroll
+      navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+              closeSidebar();
+              // Prevent default anchor jump to handle smooth scrolling ourselves (optional)
+              // e.preventDefault(); 
+              
+              // Optional: If you want a guaranteed smooth scroll, use this:
+              
+              const targetId = this.getAttribute('href');
+              if (targetId && targetId.startsWith('#')) {
+                  document.querySelector(targetId).scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              }
+              
+          });
       });
-
-      overlay.addEventListener('click', function() {
-        sidebar.classList.remove('show');
-        mainContent.classList.remove('shifted');
-        overlay.classList.remove('show');
-        mainContent.classList.remove('blurred');
-      });
-
-      ScrollReveal().reveal('.section', {
-        delay: 200,
-        distance: '50px',
-        origin: 'bottom',
-        opacity: 0,
-        easing: 'ease-in-out',
-        reset: true
-      });
-    });
-  </script>
+      
+      ScrollReveal().reveal('.section', {
+        delay: 200,
+        distance: '50px',
+        origin: 'bottom',
+        opacity: 0,
+        easing: 'ease-in-out',
+        reset: true
+      });
+    });
+  </script>
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
