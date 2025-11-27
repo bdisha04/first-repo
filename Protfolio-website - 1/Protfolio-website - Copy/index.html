@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Borad Disha | Beginner Developer</title>
+  <title>Portfolio</title>
   <meta name="author" content="Borad Disha" />
   <meta name="description" content="Beginner Developer with a passion for learning and growth." />
   <link rel="icon" href="assets/img/favicon/favicon.ico" />
@@ -115,10 +115,10 @@
           <h3 class="page-title white-text teal">About</h3>
           <div class="container flow-text">
             <p>
-              I am a beginner developer with a passion for learning and growth. I enjoy problem-solving and coding, always striving to bring my best to every task.
+              I am a beginner web designer with a passion for learning and growth. I enjoy problem-solving and coding, always striving to bring my best to every task.
             </p>
             <p>
-              As a fresher, I am eager to work on technologies like HTML, CSS, and basic computer skills. I am passionate about developing simple applications and gaining experience in real-world projects.
+              As a fresher, I am eager to apply my skills in web designing. I have a solid understanding of core web technologies including <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. I am also proficient in using popular frameworks like <strong>Bootstrap</strong> and <strong>Tailwind CSS</strong> to build responsive and modern web interfaces. I am passionate about developing user-friendly applications and gaining real-world experience.
             </p>
             <p>
               My strengths include good sense of time management, positive attitude, and smart work. I love reading, music, and travelling in my free time.
@@ -132,41 +132,47 @@
           <div class="container">
             <div class="card">
               <div class="card-content">
-                <h4 class="brown-text light">Web Development</h4>
+                <h4 class="brown-text light">Web Designing</h4>
                 <div class="row text-center">
                   <div class="col s4 m2">
-                    <i class="fa-brands fa-html5 fa-3x"></i>
+                    <img src="./assets/img/html.png" alt="HTML" style="width: 48px; height: 48px;">
                     <p>HTML</p>
                   </div>
                   <div class="col s4 m2">
-                    <i class="fa-brands fa-css3-alt fa-3x"></i>
+                    <img src="./assets/img/css.png" alt="CSS" style="width: 48px; height: 48px; margin-left: -1px;">
                     <p>CSS</p>
                   </div>
                   <div class="col s4 m2">
-                    <i class="fa-brands fa-js-square fa-3x"></i>
+                    <img src="./assets/img/js.png" alt="JavaScript"
+                      style="width: 48px; height: 48px;">
                     <p>JavaScript</p>
                   </div>
                   <div class="col s4 m2">
                     <i class="fa-brands fa-bootstrap fa-3x"></i>
+
                     <p>Bootstrap</p>
                   </div>
                   <div class="col s4 m2">
-                    <img src="https://tailwindcss.com/favicon.ico" alt="Tailwind CSS" style="width: 48px; height: 48px;">
+                    <img src="https://tailwindcss.com/favicon.ico" alt="Tailwind CSS"
+                      style="width: 48px; height: 48px;">
                     <p>Tailwind CSS</p>
                   </div>
                 </div>
                 <h4 class="brown-text light">Other Skills</h4>
                 <div class="row text-center">
                   <div class="col s4 m3">
-                    <i class="fa-solid fa-lightbulb fa-3x"></i>
+                    <img src="./assets/img/creativity.png" alt="Creativity"
+                      style="width: 48px; height: 48px;">
                     <p>Creativity</p>
                   </div>
                   <div class="col s4 m3">
-                    <i class="fa-solid fa-users fa-3x"></i>
+                    <img src="./assets/img/teamwork.png" alt="Teamwork" 
+                      style="width: 48px; height: 48px;">
                     <p>Teamwork</p>
                   </div>
                   <div class="col s4 m3">
-                    <i class="fa-solid fa-comments fa-3x"></i>
+                    <img src="./assets/img/communication.png" alt="Communication"
+                      style="width: 48px; height: 48px;">
                     <p>Communication</p>
                   </div>
                   <div class="col s4 m3">
@@ -300,16 +306,16 @@
       // Function to reset/close the sidebar state (removes all active classes)
       function closeSidebar() {
           sidebar.classList.remove('show');
-          mainContent.classList.remove('shifted');
+          
           overlay.classList.remove('show');
-          mainContent.classList.remove('blurred');
+          
       }
 
       sidebarToggle.addEventListener('click', function() {
         sidebar.classList.toggle('show');
-        mainContent.classList.toggle('shifted');
+        
         overlay.classList.toggle('show');
-        mainContent.classList.toggle('blurred');
+        
       });
 
       // Close sidebar when clicking the overlay (outside the sidebar)

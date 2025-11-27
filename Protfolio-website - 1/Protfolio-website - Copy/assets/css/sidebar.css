@@ -54,9 +54,7 @@
     transition: margin-left .3s;
   }
   
-  #main-content.blurred {
-    filter: blur(5px);
-  }
+  
   
   #sidebar-toggle {
     display: none;
@@ -80,16 +78,15 @@
   
   @media (max-width: 992px) {
     .sidebar {
-      width: 0;
-      overflow: hidden;
+      left: -300px;
     }
   
     .sidebar.show {
-      width: 300px;
+      left: 0;
     }
   
     #main-content.shifted {
-      margin-left: 300px;
+      margin-left: 0;
     }
   
     #sidebar-toggle {

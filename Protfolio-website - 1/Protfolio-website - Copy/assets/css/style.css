@@ -92,7 +92,7 @@
   
   body {
     color: #333;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
   }
@@ -181,7 +181,7 @@
   }
   
   .card .card-title {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.5;
   }
   
@@ -250,9 +250,6 @@
     #about{
       padding-top: 30%;
     }
-    .nav-item about, skills,education, contact{
-      
-    }
 }
 
 /* Mobile screens */
@@ -274,14 +271,14 @@
     .icon-btn {
         width: 40px;
         height: 40px;
-        font-size: 22px;
+        font-size: 24px;
         line-height: 40px;
     }
 
     .readme,
     .contactme {
         padding: 10px 25px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .container {
@@ -311,9 +308,7 @@
         font-size: 1rem;
     }
 
-    .section {
-        padding: 40px 0;
-    }
+
 
     .card .card-content {
         padding: 20px;
@@ -331,14 +326,14 @@
     .icon-btn {
         width: 35px;
         height: 35px;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 35px;
     }
 
     .readme,
     .contactme {
         padding: 8px 20px;
-        font-size: 13px;
+        font-size: 15px;
     }
 
     #skills .col {
